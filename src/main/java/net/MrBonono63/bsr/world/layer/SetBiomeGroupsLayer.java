@@ -10,6 +10,6 @@ public enum SetBiomeGroupsLayer implements InitLayer {
     @Override
     public int sample(LayerRandomnessSource rand, int x, int z) {
         // 0, 0 tile is always DEFAULT (0)
-        return (x == 0 && z == 0) ? 0 : BSRBiomeGroup.pickRandomBiomeGroup(rand);
+        return (x == 0 && z == 0) ? 0 : BSRBiomeGroup.pickRandomBiomeGroup();
     }
 }

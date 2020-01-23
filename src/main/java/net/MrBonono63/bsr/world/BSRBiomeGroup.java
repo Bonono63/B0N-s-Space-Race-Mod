@@ -19,8 +19,8 @@ public class BSRBiomeGroup {
         this.id = id;
     }
 
-    public static int pickRandomBiomeGroup(LayerRandomnessSource rand) {
-        return BSRBiomeGroups.get(rand.nextInt(BSRBiomeGroups.size())).id;
+    public static int pickRandomBiomeGroup() {
+        return BSRBiomeGroups.get((BSRBiomeGroups.size())).id;
     }
 
     public static BSRBiomeGroup getById(int id) {

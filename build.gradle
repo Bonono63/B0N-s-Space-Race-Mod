@@ -48,11 +48,14 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modCompile "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
+	//modmenu
 	modCompileOnly "io.github.prospector:modmenu:${project.modmenu_version}"
 	modRuntime "io.github.prospector:modmenu:${project.modmenu_version}"
 
-	modImplementation "com.github.Draylar:world-traveler:1.0.5"
+	//world traveler
+	modImplementation "com.github.Draylar:world-traveler:${project.world_traveler_version}"
 
+	//cotton jankson
 	modImplementation "io.github.cottonmc:Jankson-Fabric:2.0.0+j1.2.0"
 	include "io.github.cottonmc:Jankson-Fabric:2.0.0+j1.2.0"
 }
