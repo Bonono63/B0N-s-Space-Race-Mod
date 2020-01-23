@@ -1,0 +1,6 @@
+color of actual element in that state (blue if transparent)
+periodic table color (normally element group, according to ptable.com)
+color corresponding to pysical state typically found in
+
+4=<words for title
+explanitory

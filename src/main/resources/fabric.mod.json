@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "bsr",
+  "version": "${version}",
+
+  "name": "B0N's Space race",
+  "description": "Shit for the BSR modpack.",
+  "authors": [
+    "MrBonono63 - [Twitch]",
+    "B0N#9229 - [Discord]"
+  ],
+  "contact": {
+    "homepage": "",
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "icon": "assets/bsr/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.MrBonono63.bsr.BSR"
+    ],
+    "client": [
+      "net.MrBonono63.bsr.BSRClient"
+    ]
+  },
+  "mixins": [
+    "bsr.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.2",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
