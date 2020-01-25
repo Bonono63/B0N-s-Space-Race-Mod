@@ -56,8 +56,8 @@ dependencies {
 	modImplementation "com.github.Draylar:world-traveler:${project.world_traveler_version}"
 
 	//cotton jankson
-	modImplementation "io.github.cottonmc:Jankson-Fabric:2.0.0+j1.2.0"
-	include "io.github.cottonmc:Jankson-Fabric:2.0.0+j1.2.0"
+	modImplementation "io.github.cottonmc:Jankson-Fabric:${project.jankson_version}"
+	include "io.github.cottonmc:Jankson-Fabric:${project.jankson_version}"
 }
 
 processResources {

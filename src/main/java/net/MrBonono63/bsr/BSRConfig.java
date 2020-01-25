@@ -26,7 +26,7 @@ public class BSRConfig {
                                 loadFrom(config);
                                 writeConfigFile(configFile, config);
                         } catch (IOException | SyntaxError e) {
-                                BSR.LOGGER.error("The Hallow config could not be loaded. Default values will be used.", e);
+                                BSR.LOGGER.error("BSR config could not be loaded. Default values will be used.", e);
                         }
                 } else {
                         saveTo(config);
@@ -38,12 +38,15 @@ public class BSRConfig {
         public static void loadFrom(JsonObject obj) {
                 JsonObject Dimensions = getObjectOrEmpty("Dimensions", obj);
                 BSRDimensions.waterVaporizes = Dimensions.getBoolean("water_vaporizes", BSRDimensions.waterVaporizes);
+
+                JsonObject useProgrammerArt = getObjectOrEmpty("useProgrammerArt", obj);
+
         }
 
         //serializer
         public static void saveTo(JsonObject obj) {
                 JsonObject Dimensions = defaultPutButNotNull("Dimensions", new JsonObject(), obj);
-                Dimensions.putDefault("water_vaporizes", BSRDimensions.waterVaporizes, "Changed whether or not water vaporizes in Space");
+                Dimensions.putDefault("water_vaporizes", BSRDimensions.waterVaporizes, "Changes whether or not water vaporizes in Space");
         }
 
         private static void writeConfigFile(File file, JsonObject config) {

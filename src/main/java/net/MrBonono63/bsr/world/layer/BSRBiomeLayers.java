@@ -1,10 +1,6 @@
 package net.MrBonono63.bsr.world.layer;
 
-import net.minecraft.world.biome.layer.AddRiversLayer;
-import net.minecraft.world.biome.layer.NoiseToRiverLayer;
 import net.minecraft.world.biome.layer.ScaleLayer;
-import net.minecraft.world.biome.layer.SimpleLandNoiseLayer;
-import net.minecraft.world.biome.layer.SmoothenShorelineLayer;
 import net.minecraft.world.biome.layer.util.CachingLayerContext;
 import net.minecraft.world.biome.layer.util.LayerFactory;
 import net.minecraft.world.biome.layer.util.LayerSampleContext;
@@ -27,24 +23,6 @@ public class BSRBiomeLayers {
         for (int i = 0; i < biomeSize; ++i) {
             biomes = ScaleLayer.NORMAL.create(contextProvider.apply(1000L + (long) i), biomes);
         }
-
-        biomes = SmoothenShorelineLayer.INSTANCE.create(contextProvider.apply(101L), biomes);
-
-        // River
-        LayerFactory<R> rivers = SimpleLandNoiseLayer.INSTANCE.create(contextProvider.apply(200L), biomeInit);
-
-        rivers = ScaleLayer.NORMAL.create(contextProvider.apply(1000L), rivers);
-        rivers = ScaleLayer.NORMAL.create(contextProvider.apply(1001L), rivers);
-        for (int i = 0; i < biomeSize - 1; ++i) {
-            rivers = ScaleLayer.NORMAL.create(contextProvider.apply(1000L + (long) i), rivers);
-        }
-
-        // Noise to river
-        rivers = NoiseToRiverLayer.INSTANCE.create(contextProvider.apply(201L), rivers);
-        rivers = ScaleLayer.NORMAL.create(contextProvider.apply(1001L), rivers);
-
-        // Mix rivers with biomes
-        biomes = AddRiversLayer.INSTANCE.create(contextProvider.apply(102L), biomes, rivers);
 
         return biomes;
     }
