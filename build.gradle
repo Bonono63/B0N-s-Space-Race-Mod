@@ -53,18 +53,17 @@ dependencies {
 	modCompile "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	//modmenu
-	modCompileOnly "io.github.prospector:modmenu:${project.modmenu_version}"
-	modRuntime "io.github.prospector:modmenu:${project.modmenu_version}"
+	modImplementation ("io.github.prospector:modmenu:${project.mod_version}") {exclude (group: "io.github.prospector.modmenu", module: "ModMenu")} exclude (group: "io.github.cottonmc.jankson", module: "Jankson")
 
 	//world traveler
-	modImplementation "com.github.Draylar:world-traveler:${project.world_traveler_version}"
+	modImplementation ("com.github.Draylar:world-traveler:${project.world_traveler_version}")
 
 	//cotton jankson
-	modImplementation "io.github.cottonmc:Jankson-Fabric:${project.jankson_version}"
+	modImplementation ("io.github.cottonmc:Jankson-Fabric:${project.jankson_version}") {exclude (group: "io.github.cottonmc.jankson", module: "Jankson")}
 	include "io.github.cottonmc:Jankson-Fabric:${project.jankson_version}"
 
 	//cotton resources
-	modImplementation "io.github.cottonmc:cotton-resources:${project.cotton_resources_version}"
+	modImplementation ("io.github.cottonmc:cotton-resources:${project.cotton_resources_version}") {exclude (group: "io.github.prospector.modmenu", module: "ModMenu")} exclude (group: "io.github.cottonmc.jankson", module: "Jankson")
 	include "io.github.cottonmc:cotton-resources:${project.cotton_resources_version}"
 
 }
