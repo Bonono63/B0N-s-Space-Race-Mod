@@ -1,9 +1,9 @@
 package net.MrBonono63.bsr.registry;
 
-import net.MrBonono63.bsr.BSR;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.registry.Registry;
+import net.MrBonono63.bsr.BSR;
 
 public class BSRItems {
 

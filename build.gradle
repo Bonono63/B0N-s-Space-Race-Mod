@@ -27,6 +27,10 @@ repositories{
 		name = "CurseForge"
 		url = "https://minecraft.curseforge.com/api/maven"
 	}
+	maven {
+		name = "Cotton"
+		url = "http://server.bbkr.space:8081/artifactory/libs-release/"
+	}
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -58,6 +62,11 @@ dependencies {
 	//cotton jankson
 	modImplementation "io.github.cottonmc:Jankson-Fabric:${project.jankson_version}"
 	include "io.github.cottonmc:Jankson-Fabric:${project.jankson_version}"
+
+	//cotton resources
+	modImplementation "io.github.cottonmc:cotton-resources:${project.cotton_resources_version}"
+	include "io.github.cottonmc:cotton-resources:${project.cotton_resources_version}"
+
 }
 
 processResources {

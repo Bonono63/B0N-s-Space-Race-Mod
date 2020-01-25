@@ -1,17 +1,11 @@
 package net.MrBonono63.bsr.registry;
 
-import net.MrBonono63.bsr.world.biome.BSRBaseBiome;
-import net.MrBonono63.bsr.world.biome.BSRDomumBiome;
-import net.MrBonono63.bsr.world.biome.BSRIgnisBiome;
-import net.fabricmc.fabric.api.biomes.v1.OverworldBiomes;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.biome.Biome;
 import net.MrBonono63.bsr.BSR;
 
 public class BSRBiomes {
 
-    public static final BSRBaseBiome DOMUM_BIOME = register("domum_biome", new BSRDomumBiome(0.75f,0.8f));
-    public static final BSRBaseBiome IGNIS_BIOME = register("ignis_biome", new BSRIgnisBiome(0.75f,0.8f));
 
     private BSRBiomes() {
         // NO-OP
