@@ -16,6 +16,8 @@ public class BSRBlocks {
     //public static final Block DECEASED_DIRT = register("deceased_dirt", new Block(FabricBlockSettings.copy(Blocks.DIRT).materialColor(MaterialColor.PURPLE).build()));
 
     public static final Block ASTEROID_IRON = register("asteroid_iron", new Block(FabricBlockSettings.copy(Blocks.IRON_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_DIAMOND = register("asteroid_diamond", new Block(FabricBlockSettings.copy(Blocks.DIAMOND_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_GOLD = register("asteroid_gold", new Block(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
     public static final Block FERRITE_ROCK = register("ferrite_rock", new Block(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
     public static final Block SILICATE_ROCK = register("silicate_rock", new Block(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
     public static final Block CARBONATE_ROCK = register("carbonate_rock", new Block(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
