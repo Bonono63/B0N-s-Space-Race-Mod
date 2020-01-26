@@ -1,6 +1,5 @@
 package net.MrBonono63.bsr;
 
-import net.MrBonono63.bsr.registry.BSRBiomes;
 import net.MrBonono63.bsr.registry.BSRBlocks;
 import net.MrBonono63.bsr.registry.BSRItems;
 import net.fabricmc.api.ModInitializer;
@@ -39,7 +38,6 @@ public class BSR implements ModInitializer {
         initBlocks();
         BSRBlocks.init();
         BSRItems.init();
-        BSRBiomes.init();
 
         BSR.VOID_CHUNK_GENERATOR = FabricChunkGeneratorType.register(new Identifier("simplevoidworld", "simplevoidworld"), VoidChunkGenerator::new, ChunkGeneratorConfig::new, false);
     }
