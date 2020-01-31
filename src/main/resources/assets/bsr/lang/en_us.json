@@ -1,4 +1,9 @@
 {
   "block.bsr.block_portal": "Portal Block",
-  "block.bsr.asteroid_iron": "Asteroid Iron"
+  "block.bsr.asteroid_iron": "Asteroid Iron",
+  "block.bsr.asteroid_gold": "Asteroid Gold",
+  "block.bsr.asteroid_diamond": "Asteroid Diamond",
+  "block.bsr.ferrite_rock": "Ferrite Rock",
+  "block.bsr.silicate_rock": "Silicate Rock",
+  "block.bsr.carbonate_rock": "Carbonate Rock"
 }

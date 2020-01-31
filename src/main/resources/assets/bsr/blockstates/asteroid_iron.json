@@ -1,5 +1,9 @@
 {
   "variants": {
-    "": { "model":  "bsr:block/asteroid_iron"}
+    "": [
+      {
+        "model":  "bsr:block/asteroid_iron"
+      }
+    ]
   }
 }
