@@ -5,5 +5,6 @@
   "block.bsr.asteroid_diamond": "Asteroid Diamond",
   "block.bsr.ferrite_rock": "Ferrite Rock",
   "block.bsr.silicate_rock": "Silicate Rock",
-  "block.bsr.carbonate_rock": "Carbonate Rock"
+  "block.bsr.carbonate_rock": "Carbonate Rock",
+  "itemGroup.bsr.group": "BSR Items"
 }
