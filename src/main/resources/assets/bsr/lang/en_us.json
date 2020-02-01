@@ -3,8 +3,9 @@
   "block.bsr.asteroid_iron": "Asteroid Iron",
   "block.bsr.asteroid_gold": "Asteroid Gold",
   "block.bsr.asteroid_diamond": "Asteroid Diamond",
-  "block.bsr.ferrite_rock": "Ferrite Rock",
+  "block.bsr.asteroid_redstone": "Asteroid Redstone",
   "block.bsr.silicate_rock": "Silicate Rock",
   "block.bsr.carbonate_rock": "Carbonate Rock",
-  "itemGroup.bsr.group": "BSR Items"
+  "itemGroup.bsr.group": "BSR Items",
+  "item.bsr.oxygen_gas_bucket": "Oxygen Gas Bucket"
 }

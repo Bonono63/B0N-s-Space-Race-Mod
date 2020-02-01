@@ -2,7 +2,7 @@
   "variants": {
     "": [
       {
-        "model":  "bsr:block/ferrite_rock"
+        "model":  "bsr:block/asteroid_redstone"
       }
     ]
   }
