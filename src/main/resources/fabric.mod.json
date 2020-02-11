@@ -6,12 +6,11 @@
   "name": "B0N's Space race",
   "description": "Content for the BSR modpack.",
   "authors": [
-    "MrBonono63 - [Twitch]",
-    "B0N#9229 - [Discord]"
+    "MrBonono63 - [Twitch]"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/b0ns-space-race-mod",
+    "sources": "https://github.com/Bonono63/B0N-s-Space-Race-Mod/tree/v1.0.1"
   },
 
   "license": "MIT",
@@ -33,7 +32,7 @@
   "depends": {
     "fabricloader": ">=0.7.2",
     "fabric": "*",
-    "minecraft": "1.15.x",
+    "minecraft": ">=1.16-alpha.20.6.a",
     "worldtraveler": ">=1.0.5"
   },
   "suggests": {

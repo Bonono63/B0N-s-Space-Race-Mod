@@ -1,11 +1,16 @@
 package net.MrBonono63.bsr;
 
 import net.MrBonono63.bsr.registry.BSRBlocks;
+import net.MrBonono63.bsr.registry.BSRFluids;
 import net.MrBonono63.bsr.registry.BSRItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensionType;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.FluidBlock;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -38,6 +43,7 @@ public class BSR implements ModInitializer {
         initBlocks();
         BSRBlocks.init();
         BSRItems.init();
+        BSRFluids.init();
 
         BSR.VOID_CHUNK_GENERATOR = FabricChunkGeneratorType.register(new Identifier("simplevoidworld", "simplevoidworld"), VoidChunkGenerator::new, ChunkGeneratorConfig::new, false);
     }

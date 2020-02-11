@@ -6,8 +6,6 @@ import net.MrBonono63.bsr.BSR;
 
 public class BSRItems {
 
-    public static final Item OXYGEN_GAS_BUCKET = register("oxygen_gas_bucket", new Item(newSettings()));
-
     private BSRItems() {
         //NO-OP
     }

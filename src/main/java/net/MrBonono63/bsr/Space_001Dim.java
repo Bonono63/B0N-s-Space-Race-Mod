@@ -73,7 +73,7 @@ public class Space_001Dim extends Dimension {
     }
 
     @Override
-    public Vec3d getFogColor(float v, float v1){
+    public Vec3d modifyFogColor(int fogColor, float tickDelta) {
         double totalR = 0;
         double totalG = 0;
         double totalB = 0;
