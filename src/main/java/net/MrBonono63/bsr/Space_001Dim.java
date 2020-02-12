@@ -95,7 +95,7 @@ public class Space_001Dim extends Dimension {
     public boolean canPlayersSleep() { return true; }
 
     @Override
-    public boolean isFogThick(int x, int z) { return true; }
+    public boolean isFogThick(int x, int z) { return false; }
 
     @Override
     public DimensionType getType() { return BSR.SPACE_001; }
