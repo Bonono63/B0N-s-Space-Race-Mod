@@ -13,7 +13,7 @@ import net.minecraft.entity.player.PlayerEntity;
 
 import net.minecraft.client.MinecraftClient;
 
-public class Space_001Dim extends Dimension {
+public class OverworldOrbitDim extends Dimension {
 
     final int cycleStart = 12567;
     final float cycleStartDayFraction = cycleStart / 24000f;
@@ -39,16 +39,16 @@ public class Space_001Dim extends Dimension {
         ) / ((2f * 24000f) / cycleLength) + (cycleStart + cycleEnd) / (2f * 24000f);
     }
 
-    public Space_001Dim(World world, DimensionType type) {
+    public OverworldOrbitDim(World world, DimensionType type) {
         super(world, type, 0.0F);
     }
 
     @Override
     public ChunkGenerator<?> createChunkGenerator() {
-        return BSR.VOID_CHUNK_GENERATOR.create(world,
+        return BSR.OVERWORLD_ORBIT_CHUNK_GENERATOR.create(world,
                 BiomeSourceType.FIXED.applyConfig(BiomeSourceType.FIXED.getConfig(world.getLevelProperties())
                         .setBiome(Biomes.PLAINS)),
-                BSR.VOID_CHUNK_GENERATOR.createSettings());
+                BSR.OVERWORLD_ORBIT_CHUNK_GENERATOR.createSettings());
     }
 
     @Override
@@ -72,8 +72,7 @@ public class Space_001Dim extends Dimension {
         return true;
     }
 
-    @Override
-    public Vec3d modifyFogColor(int fogColor, float tickDelta) {
+    public Vec3d getFogColor(float fogColor, float tickDelta) {
         double totalR = 0;
         double totalG = 0;
         double totalB = 0;
@@ -98,7 +97,7 @@ public class Space_001Dim extends Dimension {
     public boolean isFogThick(int x, int z) { return false; }
 
     @Override
-    public DimensionType getType() { return BSR.SPACE_001; }
+    public DimensionType getType() { return BSR.OVERWORLD_ORBIT; }
 
     @Override
     public BlockPos getForcedSpawnPoint() {

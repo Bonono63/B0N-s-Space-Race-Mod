@@ -14,19 +14,19 @@ import net.minecraft.world.World;
 
 import java.util.Optional;
 
-public class Space_001PlacementHandler {
+public class OverworldObitPlacementHandler {
 
     public static final EntityPlacer ENTERING = (teleported, destination, portalDir, horizontalOffset, verticalOffset) -> {
-        BlockPos pos = enterVoid(teleported, (ServerWorld) teleported.getEntityWorld(), destination);
+        BlockPos pos = enterDIM(teleported, (ServerWorld) teleported.getEntityWorld(), destination);
         return new BlockPattern.TeleportTarget(new Vec3d(pos), Vec3d.ZERO, 0);
     };
 
     public static final EntityPlacer LEAVING = (teleported, destination, portalDir, horizontalOffset, verticalOffset) -> {
-        BlockPos pos = leaveVoid(teleported, (ServerWorld) teleported.getEntityWorld(), destination);
+        BlockPos pos = leaveDIM(teleported, (ServerWorld) teleported.getEntityWorld(), destination);
         return new BlockPattern.TeleportTarget(new Vec3d(pos), Vec3d.ZERO, 0);
     };
 
-    private static BlockPos enterVoid(Entity entity, ServerWorld previousWorld, ServerWorld newWorld) {
+    private static BlockPos enterDIM(Entity entity, ServerWorld previousWorld, ServerWorld newWorld) {
         BlockPos spawnPos = new BlockPos(0, 100, 0);
         spawnVoidPlatform(newWorld, spawnPos.down());
         entity.setPos(spawnPos.getX(), spawnPos.getY(), spawnPos.getZ());
@@ -35,7 +35,7 @@ public class Space_001PlacementHandler {
         return spawnPos;
     }
 
-    private static BlockPos leaveVoid(Entity entity, ServerWorld previousWorld, ServerWorld newWorld) {
+    private static BlockPos leaveDIM(Entity entity, ServerWorld previousWorld, ServerWorld newWorld) {
         BlockPos spawnLocation = getBedLocation((PlayerEntity) entity, newWorld);
         if (spawnLocation == null) {
             spawnLocation = newWorld.getSpawnPos();

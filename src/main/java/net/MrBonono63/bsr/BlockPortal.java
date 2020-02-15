@@ -21,10 +21,10 @@ public class BlockPortal extends Block {
     @Override
     public ActionResult onUse(BlockState stateBlock, World world, BlockPos blockPos, PlayerEntity playerEntity, Hand hand, BlockHitResult blockHitResult) {
         if (!world.isClient) {
-            if (playerEntity.dimension == BSR.SPACE_001) {
-                FabricDimensions.teleport(playerEntity, DimensionType.OVERWORLD, Space_001PlacementHandler.LEAVING);
+            if (playerEntity.dimension == BSR.OVERWORLD_ORBIT) {
+                FabricDimensions.teleport(playerEntity, DimensionType.OVERWORLD, OverworldObitPlacementHandler.LEAVING);
             } else {
-                playerEntity.changeDimension(BSR.SPACE_001);
+                playerEntity.changeDimension(BSR.OVERWORLD_ORBIT);
             }
         }
         return ActionResult.SUCCESS;

@@ -8,9 +8,9 @@ import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.gen.chunk.ChunkGenerator;
 import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
 
-public class VoidChunkGenerator extends ChunkGenerator<ChunkGeneratorConfig> {
+public class OverworldChunkGenerator extends ChunkGenerator<ChunkGeneratorConfig> {
 
-    public VoidChunkGenerator(IWorld world, BiomeSource biomeSource, ChunkGeneratorConfig chunkGeneratorConfig) {
+    public OverworldChunkGenerator(IWorld world, BiomeSource biomeSource, ChunkGeneratorConfig chunkGeneratorConfig) {
         super(world, biomeSource, chunkGeneratorConfig);
     }
 

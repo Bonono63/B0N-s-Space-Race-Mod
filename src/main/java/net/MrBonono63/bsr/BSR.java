@@ -4,13 +4,9 @@ import net.MrBonono63.bsr.registry.BSRBlocks;
 import net.MrBonono63.bsr.registry.BSRFluids;
 import net.MrBonono63.bsr.registry.BSRItems;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.dimension.v1.FabricDimensionType;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FluidBlock;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -25,9 +21,9 @@ public class BSR implements ModInitializer {
 
     public static final String MOD_ID = "bsr";
 
-    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(id("group"), () -> new ItemStack(Items.ITEM_FRAME));
+    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(id("group"), () -> new ItemStack(Items.BLAZE_ROD));
 
-    public static FabricDimensionType SPACE_001;
+    public static FabricDimensionType OVERWORLD_ORBIT;
 
     public static BlockPortal PORTAL_BLOCK;
 
@@ -35,7 +31,7 @@ public class BSR implements ModInitializer {
         return new Identifier(MOD_ID, name);
     }
 
-    public static ChunkGeneratorType<ChunkGeneratorConfig, VoidChunkGenerator> VOID_CHUNK_GENERATOR;
+    public static ChunkGeneratorType<ChunkGeneratorConfig, OverworldChunkGenerator> OVERWORLD_ORBIT_CHUNK_GENERATOR;
 
     @Override
     public void onInitialize() {
@@ -45,15 +41,15 @@ public class BSR implements ModInitializer {
         BSRItems.init();
         BSRFluids.init();
 
-        BSR.VOID_CHUNK_GENERATOR = FabricChunkGeneratorType.register(new Identifier("simplevoidworld", "simplevoidworld"), VoidChunkGenerator::new, ChunkGeneratorConfig::new, false);
+        BSR.OVERWORLD_ORBIT_CHUNK_GENERATOR = FabricChunkGeneratorType.register(new Identifier("bsr", "overworldorbit"), OverworldChunkGenerator::new, ChunkGeneratorConfig::new, false);
     }
 
     public static void initWorlds() {
-        SPACE_001 = FabricDimensionType.builder()
-                .factory(Space_001Dim::new)
+        OVERWORLD_ORBIT = FabricDimensionType.builder()
+                .factory(OverworldOrbitDim::new)
                 .skyLight(true)
-                .defaultPlacer(Space_001PlacementHandler.ENTERING)
-                .buildAndRegister(new Identifier(MOD_ID, "space_001"));
+                .defaultPlacer(OverworldObitPlacementHandler.ENTERING)
+                .buildAndRegister(new Identifier(MOD_ID, "overworld_orbit"));
     }
 
     public void initBlocks() {
