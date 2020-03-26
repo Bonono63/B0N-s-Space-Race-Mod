@@ -60,31 +60,23 @@ dependencies {
 	modImplementation ("io.github.prospector:modmenu:${project.modmenu_version}")
 
 	//SPINNERY
-	modCompile "com.github.vini2003:spinnery:${project.spinnery_version}"
-	include "com.github.vini2003:spinnery:${project.spinnery_version}"
+	modCompile ("com.github.vini2003:spinnery:${project.spinnery_version}") { exclude(module: "ModMenu") }
+	include ("com.github.vini2003:spinnery:${project.spinnery_version}") { exclude(module: "ModMenu") }
 
 	//TRINKETS
-	modImplementation ("com.github.emilyploszaj:trinkets:${project.trinkets_version}")
-	include ("com.github.emilyploszaj:trinkets:${project.trinkets_version}")
+	modImplementation ("com.github.emilyploszaj:trinkets:${project.trinkets_version}") { exclude(module: "ModMenu") }
+	include ("com.github.emilyploszaj:trinkets:${project.trinkets_version}") { exclude(module: "ModMenu") }
 
 	//COTTON RESOURCES
 	/* this will expose the dependency to anyone building against your mod. You might
      want to set this to modImplementation for production */
-	modApi  "io.github.cottonmc:cotton-resources:${project.cotton_resources_version}"
+	modImplementation ("io.github.cottonmc:cotton-resources:${project.cotton_resources_version}") { exclude(module: "ModMenu") }
 	/* this will package cotton-resources in your jar. skip if you don't want this */
-	include "io.github.cottonmc:cotton-resources:${project.cotton_resources_version}"
+	include ("io.github.cottonmc:cotton-resources:${project.cotton_resources_version}") { exclude(module: "ModMenu") }
 
 	//REI
 	modCompile ("me.shedaniel:RoughlyEnoughItems:${project.rei_version}") { exclude(module: "ModMenu") }
 	modImplementation ("me.shedaniel:RoughlyEnoughItems:${project.rei_version}") { exclude(module: "ModMenu") }
-
-	//COTTON
-	modImplementation "io.github.cottonmc.cotton:cotton:${project.cotton_version}"
-	include "io.github.cottonmc.cotton:cotton:${project.cotton_version}"
-
-	//world traveler (dimension lib)
-	modImplementation ("com.github.Draylar:world-traveler:${project.world_traveler_version}")
-	include "com.github.Draylar:world-traveler:${project.world_traveler_version}"
 }
 
 processResources {

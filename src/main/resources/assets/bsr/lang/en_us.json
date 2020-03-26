@@ -1,13 +1,30 @@
 {
-  "block.bsr.block_portal": "Portal Block",
+
+  "_comment": "Materials",
   "block.bsr.asteroid_iron": "Asteroid Iron",
   "block.bsr.asteroid_gold": "Asteroid Gold",
   "block.bsr.asteroid_diamond": "Asteroid Diamond",
   "block.bsr.asteroid_redstone": "Asteroid Redstone",
+
+  "_comment": "Armor",
+  "item.bsr.basic_astronaut_chestplate": "Astronaut Chestplate",
+  "item.bsr.basic_astronaut_helmet": "Astronaut Helmet",
+  "item.bsr.basic_astronaut_leggings": "Astronaut Leggings",
+  "item.bsr.basic_astronaut_boots": "Astronaut Boots",
+
+  "_comment": "Asteroid Rocks",
   "block.bsr.silicate_rock": "Silicate Rock",
   "block.bsr.carbonate_rock": "Carbonate Rock",
+
+  "_comment": "Decorative Blocks",
   "block.bsr.reinforced_scaffolding": "Reinforced Scaffolding",
-  "itemGroup.bsr.group": "BSR Items",
+
+  "_comment": "Gas Materials",
   "item.bsr.oxygen_gas_bucket": "Oxygen Gas Bucket",
-  "biome.bsr.asteroid_001": "Asteroid"
+
+  "_comment": "Biomes",
+  "biome.bsr.asteroid_001": "Asteroid",
+
+  "_comment": "Item Groups",
+  "itemGroup.bsr.group": "BSR Items"
 }

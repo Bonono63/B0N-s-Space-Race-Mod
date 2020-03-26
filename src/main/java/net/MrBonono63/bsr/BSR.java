@@ -1,8 +1,8 @@
 package net.MrBonono63.bsr;
 
-/*import dev.emi.trinkets.api.SlotGroups;
+import dev.emi.trinkets.api.SlotGroups;
 import dev.emi.trinkets.api.Slots;
-import dev.emi.trinkets.api.TrinketSlots; */
+import dev.emi.trinkets.api.TrinketSlots;
 import net.MrBonono63.bsr.block.Reinforced_Scaffolding;
 import net.MrBonono63.bsr.registry.BSRBiomes;
 import net.MrBonono63.bsr.registry.BSRBlocks;
