@@ -6,6 +6,8 @@
   "block.bsr.asteroid_redstone": "Asteroid Redstone",
   "block.bsr.silicate_rock": "Silicate Rock",
   "block.bsr.carbonate_rock": "Carbonate Rock",
+  "block.bsr.reinforced_scaffolding": "Reinforced Scaffolding",
   "itemGroup.bsr.group": "BSR Items",
-  "item.bsr.oxygen_gas_bucket": "Oxygen Gas Bucket"
+  "item.bsr.oxygen_gas_bucket": "Oxygen Gas Bucket",
+  "biome.bsr.asteroid_001": "Asteroid"
 }

@@ -1,5 +1,10 @@
 package net.MrBonono63.bsr;
 
+/*import dev.emi.trinkets.api.SlotGroups;
+import dev.emi.trinkets.api.Slots;
+import dev.emi.trinkets.api.TrinketSlots; */
+import net.MrBonono63.bsr.block.Reinforced_Scaffolding;
+import net.MrBonono63.bsr.registry.BSRBiomes;
 import net.MrBonono63.bsr.registry.BSRBlocks;
 import net.MrBonono63.bsr.registry.BSRFluids;
 import net.MrBonono63.bsr.registry.BSRItems;
@@ -10,8 +15,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.gen.chunk.ChunkGeneratorConfig;
-import net.minecraft.world.gen.chunk.ChunkGeneratorType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,43 +26,17 @@ public class BSR implements ModInitializer {
 
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(id("group"), () -> new ItemStack(Items.BLAZE_ROD));
 
-    public static FabricDimensionType OVERWORLD_ORBIT;
-
-    public static BlockPortal PORTAL_BLOCK;
 
     public static Identifier id(String name) {
         return new Identifier(MOD_ID, name);
     }
 
-    public static ChunkGeneratorType<ChunkGeneratorConfig, OverworldChunkGenerator> OVERWORLD_ORBIT_CHUNK_GENERATOR;
-
     @Override
     public void onInitialize() {
-        initWorlds();
-        initBlocks();
         BSRBlocks.init();
         BSRItems.init();
         BSRFluids.init();
-
-        BSR.OVERWORLD_ORBIT_CHUNK_GENERATOR = FabricChunkGeneratorType.register(new Identifier("bsr", "overworldorbit"), OverworldChunkGenerator::new, ChunkGeneratorConfig::new, false);
-    }
-
-    public static void initWorlds() {
-        OVERWORLD_ORBIT = FabricDimensionType.builder()
-                .factory(OverworldOrbitDim::new)
-                .skyLight(true)
-                .defaultPlacer(OverworldObitPlacementHandler.ENTERING)
-                .buildAndRegister(new Identifier(MOD_ID, "overworld_orbit"));
-    }
-
-    public void initBlocks() {
-        PORTAL_BLOCK = new BlockPortal();
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "block_portal"), PORTAL_BLOCK);
-
-        BlockItem blockItem = new BlockItem(PORTAL_BLOCK, new Item.Settings().group(GROUP));
-        blockItem.appendBlocks(Item.BLOCK_ITEMS, blockItem);
-
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "block_portal"), blockItem);
+        BSRBiomes.init();
     }
 
     public static BlockState randomTerracotta() {

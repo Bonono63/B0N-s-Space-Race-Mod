@@ -1,5 +1,6 @@
 package net.MrBonono63.bsr.registry;
 
+import net.MrBonono63.bsr.block.Reinforced_Scaffolding;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -19,9 +20,13 @@ public class BSRBlocks {
     public static final Block ASTEROID_GOLD = register("asteroid_gold", new Block(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
     public static final Block ASTEROID_DIAMOND = register("asteroid_diamond", new Block(FabricBlockSettings.copy(Blocks.DIAMOND_ORE).materialColor(MaterialColor.GRAY).build()));
 
+    public static final Block ASTEROID_LEAD = register("asteroid_lead", new Block(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
+
     //S-type Asteroid blocks
     public static final Block SILICATE_ROCK = register("silicate_rock", new Block(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
     public static final Block ASTEROID_REDSTONE = register("asteroid_redstone", new Block(FabricBlockSettings.copy(Blocks.REDSTONE_ORE).materialColor(MaterialColor.GRAY).build()));
+
+    public static final Block REINFORCED_SCAFFOLDING = register("reinforced_scaffolding", new Reinforced_Scaffolding(FabricBlockSettings.copy(Blocks.IRON_BLOCK).build()));
 
     private BSRBlocks() {
         // NO-OP?
