@@ -1,7 +1,7 @@
 # B0N's Space Race Mod
 A Minecraft Mod used with B0N's Space Race Modpack to make a minecraft-space experience.
 
-currently the mod has established a dimension, however lots of other work is to be done before it can be declared done.
+There is lots of content planned to be produced in the future.
 
 features planned to be added can be seen in the projects tab along side other things associated with my work flow.
 
@@ -13,9 +13,14 @@ credit for the v1.0.0 block textures goes to BredBirb (here on github)
 
 Dependencies:
 - Spinnery
-- World Traveler
 - Cotton
 - Cotton Resources
 - Trinkets
 
 Thanks for any support given to the mod.
+
+#License
+
+This mod is registered under the MIT License,
+if you wish to port, modify, etc. you can,
+as long as credit is given to ths work

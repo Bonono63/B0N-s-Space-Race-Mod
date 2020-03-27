@@ -10,16 +10,14 @@ import net.minecraft.util.registry.Registry;
 import net.MrBonono63.bsr.BSR;
 
 public class BSRItems {
-    //METALS
-    public static final Item LEAD_INGOT = register("lead_ingot", new Item(newSettings().rarity(Rarity.EPIC)));
-
     //JETPACKS
     public static final Item BASIC_JETPACK = register("basic_jetpack", new JetpackItem(newSettings().rarity(Rarity.RARE)));
 
     //ARMOR ITEMS
     public static final Item BASIC_ASTRONAUT_HELMET = register("basic_astronaut_helmet", new ArmorItem(CustomArmorMaterials.BASIC_ASTRONAUT, EquipmentSlot.HEAD, (newSettings().group(BSR.GROUP).rarity(Rarity.RARE).maxCount(1))));
     public static final Item BASIC_ASTRONAUT_CHESTPLATE = register("basic_astronaut_chestplate", new ArmorItem(CustomArmorMaterials.BASIC_ASTRONAUT, EquipmentSlot.CHEST, (newSettings().group(BSR.GROUP).rarity(Rarity.RARE).maxCount(1))));
-
+    public static final Item BASIC_ASTRONAUT_LEGGINGS = register("basic_astronaut_leggings", new ArmorItem(CustomArmorMaterials.BASIC_ASTRONAUT, EquipmentSlot.LEGS, (newSettings().group(BSR.GROUP).rarity(Rarity.RARE).maxCount(1))));
+    public static final Item BASIC_ASTRONAUT_BOOTS = register("basic_astronaut_boots", new ArmorItem(CustomArmorMaterials.BASIC_ASTRONAUT, EquipmentSlot.FEET, (newSettings().group(BSR.GROUP).rarity(Rarity.RARE).maxCount(1))));
 
     private BSRItems() {
         //NO-OP

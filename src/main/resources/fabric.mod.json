@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "B0N's Space race",
-  "description": "Content for the BSR modpack.",
+  "description": "A Sci-fi mod for Fabric",
   "authors": [
     "MrBonono63 - [Twitch]"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/b0ns-space-race-mod",
-    "sources": "https://github.com/Bonono63/B0N-s-Space-Race-Mod/tree/v1.0.1"
+    "sources": "https://github.com/Bonono63/B0N-s-Space-Race-Mod/"
   },
 
   "license": "MIT",

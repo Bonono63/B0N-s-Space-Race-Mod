@@ -4,6 +4,7 @@ import net.MrBonono63.bsr.block.Reinforced_Scaffolding;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.GlassBlock;
 import net.minecraft.block.MaterialColor;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,9 +14,8 @@ import net.MrBonono63.bsr.BSR;
 import java.util.function.Function;
 
 public class BSRBlocks {
-
     /*
-    *
+    * ASTEROID Materials
     * */
 
     //C-type Asteroid blocks
@@ -29,7 +29,14 @@ public class BSRBlocks {
     public static final Block SILICATE_ROCK = register("silicate_rock", new Block(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
     public static final Block ASTEROID_REDSTONE = register("asteroid_redstone", new Block(FabricBlockSettings.copy(Blocks.REDSTONE_ORE).materialColor(MaterialColor.GRAY).build()));
 
-    public static final Block REINFORCED_SCAFFOLDING = register("reinforced_scaffolding", new Reinforced_Scaffolding(FabricBlockSettings.copy(Blocks.IRON_BLOCK).build()));
+    /*
+    * DECORATION Blocks
+    * TODO add connected textures
+    * */
+
+    //public static final Block REINFORCED_SCAFFOLDING = register("reinforced_scaffolding", new Reinforced_Scaffolding(FabricBlockSettings.copy(Blocks.IRON_BLOCK).nonOpaque().build()));
+
+    public static final Block REINFORCED_GLASS = register("reinforced_glass", new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().build()));
 
     private BSRBlocks() {
         // NO-OP?
