@@ -1,5 +1,8 @@
 package net.MrBonono63.bsr.registry;
 
+import net.MrBonono63.bsr.block.AsteroidOreBlock;
+import net.MrBonono63.bsr.block.CreativePortalBlock;
+import net.MrBonono63.bsr.block.OxygenBlock;
 import net.MrBonono63.bsr.block.Reinforced_Scaffolding;
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -15,19 +18,32 @@ import java.util.function.Function;
 
 public class BSRBlocks {
     /*
+    * MISC
+    * */
+
+    public static final Block PORTAL_BLOCK = register("portal_block", new CreativePortalBlock(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
+
+    /*
     * ASTEROID Materials
     * */
 
     //C-type Asteroid blocks
     public static final Block CARBONATE_ROCK = register("carbonate_rock", new Block(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
-    public static final Block ASTEROID_IRON = register("asteroid_iron", new Block(FabricBlockSettings.copy(Blocks.IRON_ORE).materialColor(MaterialColor.GRAY).build()));
-    public static final Block ASTEROID_GOLD = register("asteroid_gold", new Block(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
-    public static final Block ASTEROID_DIAMOND = register("asteroid_diamond", new Block(FabricBlockSettings.copy(Blocks.DIAMOND_ORE).materialColor(MaterialColor.GRAY).build()));
-    public static final Block ASTEROID_LEAD = register("asteroid_lead", new Block(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_IRON_ORE = register("asteroid_iron_ore", new AsteroidOreBlock(FabricBlockSettings.copy(Blocks.IRON_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_GOLD_RE = register("asteroid_gold_ore", new AsteroidOreBlock(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_DIAMOND_ORE = register("asteroid_diamond_ore", new AsteroidOreBlock(FabricBlockSettings.copy(Blocks.DIAMOND_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_LEAD_ORE = register("asteroid_lead_ore", new AsteroidOreBlock(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_TITANIUM_ORE = register("asteroid_titanium_ore", new AsteroidOreBlock(FabricBlockSettings.copy(Blocks.GOLD_ORE).materialColor(MaterialColor.GRAY).build()));
+
 
     //S-type Asteroid blocks
     public static final Block SILICATE_ROCK = register("silicate_rock", new Block(FabricBlockSettings.copy(Blocks.STONE).materialColor(MaterialColor.GRAY).build()));
-    public static final Block ASTEROID_REDSTONE = register("asteroid_redstone", new Block(FabricBlockSettings.copy(Blocks.REDSTONE_ORE).materialColor(MaterialColor.GRAY).build()));
+    public static final Block ASTEROID_REDSTONE_ORE = register("asteroid_redstone_ore", new AsteroidOreBlock(FabricBlockSettings.copy(Blocks.REDSTONE_ORE).materialColor(MaterialColor.GRAY).build()));
+
+    /*
+    * Fluid Blocks
+    * */
+    public static final Block OXYGEN_BLOCK = register("oxygen", new OxygenBlock(BSRFluids.OXYGEN, FabricBlockSettings.copy(Blocks.WATER).build()));
 
     /*
     * DECORATION Blocks
@@ -36,7 +52,7 @@ public class BSRBlocks {
 
     //public static final Block REINFORCED_SCAFFOLDING = register("reinforced_scaffolding", new Reinforced_Scaffolding(FabricBlockSettings.copy(Blocks.IRON_BLOCK).nonOpaque().build()));
 
-    public static final Block REINFORCED_GLASS = register("reinforced_glass", new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).nonOpaque().build()));
+    public static final Block REINFORCED_GLASS = register("reinforced_glass", new GlassBlock(FabricBlockSettings.copy(Blocks.GLASS).hardness(0.6f).resistance(800f).nonOpaque().build()));
 
     private BSRBlocks() {
         // NO-OP?

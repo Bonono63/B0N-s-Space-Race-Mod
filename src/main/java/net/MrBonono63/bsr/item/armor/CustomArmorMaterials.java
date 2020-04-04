@@ -1,6 +1,5 @@
 package net.MrBonono63.bsr.item.armor;
 
-import io.github.cottonmc.resources.CottonResources;
 import net.MrBonono63.bsr.registry.BSRItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
@@ -14,7 +13,7 @@ import java.util.function.Supplier;
 public enum CustomArmorMaterials implements ArmorMaterial {
 
     BASIC_ASTRONAUT("basic_astronaut", 5, new int[]{3,4,3,2}, 1, SoundEvents.BLOCK_WOOL_PLACE, 4.0F, () -> {
-        return Ingredient.ofItems();
+        return Ingredient.ofItems(null);
     });
 
     private static final int[] baseDurability = {13, 15, 16, 11};
@@ -68,10 +67,6 @@ public enum CustomArmorMaterials implements ArmorMaterial {
 
     @Override
     public float getToughness() {
-        return 0;
-    }
-
-    public float getKnockbackResistance() {
         return 0;
     }
 }

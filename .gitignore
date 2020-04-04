@@ -11,7 +11,10 @@ classes/
 *.iml
 *.ipr
 *.iws
+
+# image formats
 *.pdn
+*.psd
 
 # vscode
 
