@@ -1,0 +1,10 @@
+{
+  "defaults": {
+    "uvlock": true
+  },
+  "variants": {
+    "type=top": { "model":"bsr:block/reinforced_shuttle_hull_slab_top" },
+    "type=bottom": { "model":"bsr:block/reinforced_shuttle_hull_slab" },
+    "type=double": { "model":"bsr:block/reinforced_shuttle_hull" }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "bottom=true": { "model": "block/reinforced_scaffold_unstable" },
+    "bottom=false": { "model": "block/reinforced_scaffold_stable" },
+    "bottom=false, distance=4, waterlogged=true": { "model":  "block/reinforced_scaffold_stable" },
+    "bottom=true, distance=0, waterlogged=true": { "model":  "block/reinforced_scaffold_stable" },
+    "bottom=true, distance=0, waterlogged=false": { "model": "block/reinforced_scaffold_stable"},
+    "bottom=true, distance=0, waterlogged=false": { "model": "block/reinforced_scaffold_stable"}
+  }
+}

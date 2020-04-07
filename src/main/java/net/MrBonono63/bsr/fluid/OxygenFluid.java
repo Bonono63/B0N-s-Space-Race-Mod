@@ -53,7 +53,7 @@ public class OxygenFluid extends BaseFluid {
 
     @Override
     public Item getBucketItem() {
-        return BSRItems.OXYGEN_BUCKET;
+        return BSRItems.OXYGEN_CANISTER;
     }
 
     @Override

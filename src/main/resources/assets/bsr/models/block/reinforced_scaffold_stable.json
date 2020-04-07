@@ -1,10 +1,10 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"particle": "bsr:block/reinforced_scaffolding_top",
-		"top": "bsr:block/reinforced_scaffolding_top",
-		"side": "bsr:block/reinforced_scaffolding_side",
-		"bottom": "bsr:block/reinforced_scaffolding_bottom"
+		"particle": "bsr:block/reinforced_scaffold_top",
+		"top": "bsr:block/reinforced_scaffold_top",
+		"side": "bsr:block/reinforced_scaffold_side",
+		"bottom": "bsr:block/reinforced_scaffold_bottom"
 	},
 	"elements": [
 		{

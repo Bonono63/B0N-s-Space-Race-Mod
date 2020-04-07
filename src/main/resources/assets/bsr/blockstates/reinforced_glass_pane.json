@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "bsr:block/acacia/post" }
+    },
+    {   "when": { "north": true },
+      "apply": { "model": "bsr:block/pane/acacia/side" }
+    },
+    {   "when": { "east": true },
+      "apply": { "model": "bsr:block/pane/acacia/side", "y": 90 }
+    },
+    {   "when": { "south": true },
+      "apply": { "model": "bsr:block/pane/acacia/side_alt" }
+    },
+    {   "when": { "west": true },
+      "apply": { "model": "bsr:block/pane/acacia/side_alt", "y": 90 }
+    },
+    {   "when": { "north": false },
+      "apply": { "model": "bsr:block/pane/acacia/noside" }
+    },
+    {   "when": { "east": false },
+      "apply": { "model": "bsr:block/pane/acacia/noside_alt" }
+    },
+    {   "when": { "south": false },
+      "apply": { "model": "bsr:block/pane/acacia/noside_alt", "y": 90 }
+    },
+    {   "when": { "west": false },
+      "apply": { "model": "bsr:block/pane/acacia/noside", "y": 270 }
+    }
+  ]
+}

@@ -12,9 +12,9 @@ public class BSRClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(), BSRBlocks.REINFORCED_GLASS, BSRBlocks.OXYGEN_BLOCK /*BSRBlocks.REINFORCED_SCAFFOLDING*/);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getTranslucent(), BSRBlocks.REINFORCED_GLASS, BSRBlocks.OXYGEN_BLOCK);
 
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BSRBlocks.REINFORCED_GLASS /*BSRBlocks.REINFORCED_SCAFFOLDING*/);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), BSRBlocks.REINFORCED_GLASS, BSRBlocks.REINFORCED_SCAFFOLD);
 
         ResourceManagerHelper.get(ResourceType.CLIENT_RESOURCES).registerReloadListener(new FluidResourceLoader());
     }

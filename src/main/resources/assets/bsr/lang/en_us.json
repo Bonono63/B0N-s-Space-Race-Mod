@@ -6,6 +6,11 @@
   "block.bsr.asteroid_diamond_ore": "Asteroid Diamond Ore",
   "block.bsr.asteroid_redstone_ore": "Asteroid Redstone Ore",
   "block.bsr.asteroid_lead_ore": "Asteroid Lead Ore",
+  "block.bsr.asteroid_titanium_ore": "Asteroid Titanium Ore",
+  "block.bsr.asteroid_iridium_ore": "Asteroid Iridium Ore",
+  "block.bsr.asteroid_zinc_ore": "Asteroid Zinc Ore",
+  "block.bsr.asteroid_aluminum_ore": "Asteroid Aluminum Ore",
+  "block.bsr.asteroid_osmium_ore": "Asteroid Osmium Ore",
 
   "_comment": "Armor",
   "item.bsr.basic_astronaut_chestplate": "Astronaut Chestplate",

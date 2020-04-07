@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "": [
+      {
+        "model":  "bsr:block/reinforced_shuttle_hull"
+      }
+    ]
+  }
+}
